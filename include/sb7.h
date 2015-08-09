@@ -26,7 +26,7 @@
 #ifndef __SB7_H__
 #define __SB7_H__
 
-#ifdef WIN32
+#ifdef _WIN32
     #pragma once
     #define _CRT_SECURE_NO_WARNINGS 1
 
@@ -48,6 +48,7 @@
 
 #include <stdio.h>
 #include <string.h>
+#define _USE_MATH_DEFINES  1 // Include constants defined in math.h
 #include <math.h>
 
 namespace sb7
