@@ -8,7 +8,7 @@ solution "Superbible7"
   
   dofile ("examples.lua")
   
-  --include "extern/glfw-3.0.4"
+  include "extern/glfw-3.0.4"
   
   project "sb7"
     kind "StaticLib"
@@ -25,7 +25,7 @@ solution "Superbible7"
   configuration "release"
     flags "Optimize"
     
-  configuration { "releaseWithDbg" }
+  configuration "releaseWithDbg"
     flags { "Optimize", "Symbols" }
     targetsuffix "_d"
       

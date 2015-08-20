@@ -26,15 +26,13 @@ project "glfw3"
     targetsuffix "_d"
     
   configuration "windows"
+    excludes { "src/cocoa*", "src/x11*", "src/egl*", "src/glx*" }
     defines { "_GLFW_WIN32", "_GLFW_WGL" }
-    files "src/win/*.c"
-    includedirs { "include/win" }
     links { "winmm", "opengl32", "gdi32" }
     
   configuration "linux"
+    excludes { "src/cocoa*", "src/win32*", "src/wgl*", "src/egl*" }
     defines { "_GLFW_X11", "_GLFW_GLX", "_GLFW_HAS_GLXGETPROCADDRESS"  }
-    files "src/linux/*.c"
-    includedirs "include/linux"
     links { "X11", "pthread", "Xrandr",  "Xi",  "Xxf86vm",  "rt",  "m",  "GL" }
     
   configuration "vs"
